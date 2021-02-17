@@ -340,6 +340,7 @@ jobs:
           CXXFLAGS: ${{ matrix.cxxflags }}
           LINKFLAGS: ${{ matrix.linkflags }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "linux"
         run: |
           echo '==================================> SETUP'
           if [ -n "$GHA_CONTAINER" ]; then
@@ -493,6 +494,7 @@ jobs:
           CXXFLAGS: ${{ matrix.cxxflags }}
           LINKFLAGS: ${{ matrix.linkflags }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "osx"
         run: |
           echo '==================================> SETUP'
           set -ex
